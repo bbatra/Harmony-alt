@@ -110,7 +110,12 @@
             vm.newChore.participants = vm.assigneeList;
             vm.newChore.datePlanned = new Date(vm.newChore.choreDate).getTime();
 
-            let time24 = vm.newChore.choreTime.split(":");
+            var newdate = new Date(vm.newChore.choreTime);
+            //console.log(newdate.getTime());
+            let time24 = [];
+            time24[0] = newdate.getHours();
+            time24[1] = newdate.getMinutes();
+            //let time24 = vm.newChore.choreTime.split(":");
 
             if(validateHours(time24[0])&& validateMins(time24[1])){
                 vm.newChore.datePlanned += time24[0]*60*60*1000 + time24[1]*60*60;
