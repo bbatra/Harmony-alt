@@ -32,7 +32,7 @@
         vm.friends = {};
         vm.threadFriend = {};
 
-
+        vm.user = {};
 
         if(!$rootScope.userId){
             console.log("in branch");
@@ -43,6 +43,7 @@
                 console.log(JSON.stringify(user, null,2));
                 $rootScope.userId = user._id;
                 $rootScope.user = user;
+                vm.user = $rootScope.user;
             }else{
                 $rootScope.userId = null;
                 $rootScope.user = null;
