@@ -14,11 +14,11 @@ import path from 'path';
 var PORT = null;
 switch (SERVER_ENV.ENV) {
     case 'DEVELOPMENT':
-        PORT = 8000;
+        PORT = 8888;
         break;
 
     case 'PRODUCTION':
-        PORT = 80;
+        PORT = 8888;
         break;
 }
 
