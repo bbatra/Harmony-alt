@@ -22,6 +22,7 @@
 
     $rootScope.selectedTab = "CHORES";
     function goBack(){
+      ga('send','event','alternate','failure');
       $state.go('dash.chat');
     }
 
